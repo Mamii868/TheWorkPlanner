@@ -3,10 +3,10 @@ $('#currentDay').text(date)
 var saveBtn = $('.saveBtn')
 
 saveBtn.on('click', function () {
-    var content = $(this).siblings('.content')
+    var content = $(this).siblings('.content').val();
     var time = $(this).parent().attr('id');
     localStorage.setItem(time, content);
-    console.log("saved");
+    window.alert("saved")
 });
 
 $('#9am .content').val(localStorage.getItem("9am")) 
